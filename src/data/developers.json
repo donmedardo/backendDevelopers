@@ -1,0 +1,14 @@
+[
+    {
+        "id":1,
+        "nombres_completos": "German Simba" ,
+        "link_gitHub": "www.github.com/donmedardo",
+        "tecnologias_conocidas": "java, angular, react"
+    },
+    {
+        "id":2,
+        "nombres_completos": "Angel Urbano" ,
+        "link_gitHub": "www.github.com/angelito123",
+        "tecnologias_conocidas": "java, angular, react"
+    }
+]
