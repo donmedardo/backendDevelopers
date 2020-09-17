@@ -11,6 +11,22 @@ router.get('/', (req,res) => {
 router.get('/developers', (req,res) => {
     res.json(developers);
 });
+
+router.get('/developers/:id', (req,res) => {
+    const { id } = req.params;
+    console.info(id);
+    let developerSearched;
+    _.each(developers,(developer,i)=>{
+        
+        if(developer && developer.id == id){
+            developerSearched = developer
+            console.info(developerSearched);
+        }
+    });
+    res.json(developerSearched);
+
+});
+
 router.post('/developers', (req,res) => {
     const id = developers.slice(-1)[0].id  +1;
     const develop = {id ,...req.body};
