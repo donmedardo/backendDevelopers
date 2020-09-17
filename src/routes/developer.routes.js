@@ -28,7 +28,8 @@ router.get('/developers/:id', (req,res) => {
 });
 
 router.post('/developers', (req,res) => {
-    const id = developers.slice(-1)[0].id  +1;
+    console.info(developers);
+    const id = developers.length>0? developers.slice(-1)[0].id  +1:1;
     req.body.id = id;
     const develop = {...req.body};
     developers.push(develop);
