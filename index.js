@@ -10,8 +10,8 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 app.use(require('./src/routes/developer.routes'));
-
+//listener de puerto
 app.listen(port,()=>{
     console.log(`Example app listening at http://localhost:${port}`)
-    //console.log(`server on port ${app.get('port')}`);
+    //console.log(`server on port ${app.get('port')}`); 
 })
