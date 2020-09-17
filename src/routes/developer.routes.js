@@ -29,7 +29,8 @@ router.get('/developers/:id', (req,res) => {
 
 router.post('/developers', (req,res) => {
     const id = developers.slice(-1)[0].id  +1;
-    const develop = {id ,...req.body};
+    req.body.id = id;
+    const develop = {...req.body};
     developers.push(develop);
     res.json(developers);
 });
